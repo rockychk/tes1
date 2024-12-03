@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Aqiqah</title>
+  <!-- Menambahkan Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+  <div class="container">
+    <!-- Frame Cover -->
+    <div class="frame-cover">
+      <div class="isi-konten">
+      <h1>Aqiqah</h1>
+      <h2>Rafasya</h2>
+      <h5>Ahad, 10 Desember 2024</h5>
+      <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1619159802/attached_image/5-fakta-menarik-tentang-bayi-yang-mungkin-belum-kamu-ketahui.jpg" style="width: 400px;" alt="Image">
+      <h1>Azizah</h1>
+      <button id="openInvitation">Buka Undangan</button>
+    </div>
+
+
+      <div class="kontener-gambar">
+        <img src="TEMA-HEWAN/asset/img/tm.webp" alt="Gambar 1" class="image-1">
+        <img src="TEMA-HEWAN/asset/img/tl.webp" alt="Gambar 2" class="image-2">
+        <img src="TEMA-HEWAN/asset/img/tr.webp" alt="Gambar 3" class="image-3">
+        <img src="TEMA-HEWAN/asset/img/center.webp" alt="Gambar 4" class="image-4">
+        <img src="TEMA-HEWAN/asset/img/left.webp" alt="Gambar 5" class="image-5">
+        <img src="TEMA-HEWAN/asset/img/right.webp" alt="Gambar 6" class="image-6">
+        <img src="TEMA-HEWAN/asset/img/bl.webp" alt="Gambar 7" class="image-7">
+        <img src="TEMA-HEWAN/asset/img/br.webp" alt="Gambar 8" class="image-8">
+        <img src="TEMA-HEWAN/asset/img/bm-1.webp" alt="Gambar 9" class="image-9">
+      </div>
+
+    </div>
+
+    <!-- Frame 1: Selamat Datang -->
+    <div id="frame-1" class="frame frame-content" style="background-color: #1c2786;">
+      <h1>Selamat Datang</h1>
+      <p>Terima kasih telah hadir di undangan Aqiqah Rafasya. Kami berharap kehadiran Anda membawa berkah dan kebahagiaan.</p>
+    </div>
+
+    <!-- Frame 2: Profil -->
+    <div id="frame-2" class="frame frame-content" style="background-color: #afb155;">
+      <h1>Profil</h1>
+      <p>Rafasya lahir pada tanggal 20 November 2024, anak dari pasangan Azizah dan Muhammad.</p>
+      <video id="profileVideo" width="80%" controls muted playsinline>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1LE_KfqkCCI?si=Sm-3MfPOSbHLvqI_&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        Browser Anda tidak mendukung video.
+    </video>
+    </div>
+    
+
+    <!-- Frame 3: Acara -->
+    <div id="frame-3" class="frame frame-content" style="background-color: #b44343;">
+      <h1>Acara</h1>
+      <p>Aqiqah akan diselenggarakan pada:</p>
+      <p><strong>Ahad, 10 Desember 2024</strong></p>
+      <p>Pukul 10:00 WIB</p>
+      <p>Di Kediaman Keluarga Azizah, Jl. Mawar No. 10, Jakarta.</p>
+    </div>
+
+    <!-- Frame 4: Ucapan -->
+    <div id="frame-4" class="frame frame-content" style="background-color: #5594b1;">
+      <h1>Ucapan</h1>
+      <p>Berikan ucapan dan doa terbaik untuk Rafasya melalui kolom di bawah ini:</p>
+      <textarea placeholder="Tulis ucapan Anda di sini..." style="width: 80%; height: 80px; margin-top: 10px;"></textarea>
+      <button style="margin-top: 10px; padding: 5px 15px; background: #c79570; color: white; border: none; border-radius: 5px;">Kirim</button>
+    </div>
+
+    <!-- Frame 5: Hadiah -->
+    <div id="frame-5" class="frame frame-content" style="background-color: #55b16c;">
+      <h1>Hadiah</h1>
+      <p>Jika Anda ingin memberikan hadiah, berikut adalah detail rekening kami:</p>
+      <p><strong>Bank XYZ</strong></p>
+      <p>No. Rekening: 123456789</p>
+      <p>Atas Nama: Azizah</p>
+    </div>
+
+    <!-- Frame 6: Galeri Foto (Kolase) -->
+    <div class="frame frame-content" id="frame6" style="background-color: #cc00c2;">
+      <h1>Galeri Foto</h1>
+      <p>Berikut adalah beberapa foto dari acara Aqiqah Rafasya yang ingin kami bagikan dalam bentuk kolase foto.</p>
+    </div>
+
+    <!-- AUDIO -->
+    <div id="audioControl">
+      <button id="playPauseAudio">
+        <i id="audioIcon" class="bi bi-play-circle"></i>
+      </button>
+    </div>
+    <audio id="backgroundAudio" src="TEMA-HEWAN/asset/music/backsound.mp3" loop></audio>
+    
+  </div>
+
+  <!-- Navigation -->
+
+  <div class="navigation" id="navigation">
+    <button aria-label="Home">
+        <img src="icon/house-fill.svg" alt="House Icon" class="icon">
+    </button>
+    <button aria-label="Calendar">
+        <img src="icon/calendar-week-fill.svg" alt="Calendar Icon" class="icon">
+    </button>
+    <button aria-label="Location">
+        <img src="icon/geo-alt-fill.svg" alt="Location Icon" class="icon">
+    </button>
+    <button aria-label="Chat">
+        <img src="icon/chat-dots-fill.svg" alt="Chat Icon" class="icon">
+    </button>
+    <button aria-label="Gift">
+        <img src="icon/gift-fill.svg" alt="Gift Icon" class="icon">
+    </button>
+    <button aria-label="Chat Square">
+        <img src="icon/chat-square-quote-fill.svg" alt="Chat Square Icon" class="icon">
+    </button>
+
+  <script>
+    const openInvitation = document.getElementById('openInvitation');
+    const frameCover = document.querySelector('.frame-cover');
+    const navigation = document.getElementById('navigation');
+
+    // FUNGSI TOMBOL BUKA UNDANGAN
+    openInvitation.addEventListener('click', () => {
+      frameCover.classList.add('hidden');
+      setTimeout(() => {
+        frameCover.style.display = 'none'; // Sembunyikan setelah transisi
+        navigation.style.display = 'flex'; // Tampilkan navigasi
+        document.getElementById('audioControl').style.display = 'block'; // Tampilkan tombol audio
+        document.body.style.overflow = 'auto'; // Aktifkan scroll untuk kontainer
+        document.querySelector('.container').style.overflowY = 'auto'; // Tampilkan scroll Y
+      }, 800); // Sesuaikan dengan durasi transisi CSS
+
+      frames[0].classList.add('active');
+      audio.play(); // Memulai audio otomatis
+      audioIcon.classList.remove('bi-play-circle');
+      audioIcon.classList.add('bi-pause-circle'); // Ubah ikon ke pause saat audio mulai
+    });
+
+    //FUNGSI NAVIGASI
+    const navButtons = document.querySelectorAll('.navigation button'); // Tombol navigasi
+    const frames = document.querySelectorAll('.frame'); // Semua frame
+    navButtons.forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        const targetFrame = frames[index];
+        targetFrame.scrollIntoView({ behavior: 'smooth' }); // Scroll ke frame yang dituju
+      });
+    });
+
+    // FUNGSI AUDIO
+    const audio = document.getElementById('backgroundAudio');
+    const playPauseAudio = document.getElementById('playPauseAudio');
+    const audioIcon = document.getElementById('audioIcon');
+
+    // Fungsi untuk toggle play/pause
+    playPauseAudio.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        audioIcon.classList.remove('bi-play-circle');
+        audioIcon.classList.add('bi-pause-circle');
+      } else {
+        audio.pause();
+        audioIcon.classList.remove('bi-pause-circle');
+        audioIcon.classList.add('bi-play-circle');
+      }
+    });
+
+    //FUNGSI VIDEO
+    const video = document.getElementById('profileVideo');
+    let isVideoPlaying = false;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isVideoPlaying) {
+            video.play()
+              .then(() => {
+                isVideoPlaying = true; // Tandai bahwa video sedang diputar
+              })
+              .catch((error) => {
+                console.error("Error playing video:", error);
+              });
+          } else if (!entry.isIntersecting && isVideoPlaying) {
+            video.pause();
+            isVideoPlaying = false; // Tandai bahwa video dijeda
+          }
+        });
+      },
+      { threshold: 0.5 } // Deteksi frame-2 jika setidaknya 50% terlihat
+    );
+
+    // Observasi elemen frame-2
+    const frame2 = document.getElementById('frame-2');
+    observer.observe(frame2);
+
+
+
+
+  </script>
+</body>
+</html>
