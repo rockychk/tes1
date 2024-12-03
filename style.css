@@ -8,6 +8,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      font-family: 'Montserrat Light';
       height: 100vh;
       background-color: #861c1c;
       overflow: hidden;
@@ -20,49 +21,8 @@
       position: relative;
       scroll-behavior: smooth; /* Animasi scroll yang mulus */
       overflow: hidden; /* Aktifkan scroll */
+      color: whitesmoke;
     }
-
-    .frame {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height: 100%;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .frame img {
-      width: 80%;
-      margin: 20px 0;
-    }
-
-    .frame h1, .frame h2, .frame h5, .frame p {
-      margin-bottom: 15px;
-    }
-
-    .frame p {
-      max-width: 600px;
-      text-align: justify;
-    }
-
-    .frame-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height: 100%;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .frame-content img {
-      width: 80%;
-      margin: 20px 0;
-    }
-
 
     .frame-cover {
       display: flex;
@@ -75,8 +35,9 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: #ffefdb;
-      z-index: 10;
+      background-image: url('img/bg.webp');
+      background-size: cover;
+      z-index: 43;
       opacity: 1;
       transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;    
     }
@@ -91,11 +52,13 @@
     }
 
     .frame-cover button {
-      padding: 10px 20px;
-      background-color: #c79570;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #8d6241;
       color: white;
       border: none;
-      border-radius: 5px;
+      font-size: 18px;
+      border-radius: 30px;
       cursor: pointer;
     }
 
@@ -103,11 +66,68 @@
         width: 100%;
     }
 
+    .frame-cover .image-3{
+        width: 45%;
+    }
+
     .isi-konten {
+        margin-bottom: 50px;
         position: fixed;
         z-index: 10;
     }
 
+    .nama-anak{
+        font-size: 80px;
+        font-family: 'Helium';
+        color: #13b2f1;
+        letter-spacing: -5px;
+    }
+
+    #tamu-undangan{
+        font-size: 30px;  /* Ukuran font tetap proporsional */
+        font-weight: bolder;
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+
+    .frame {
+        position: relative; /* Agar gambar berada di belakang frame-content */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url('img/bg.webp');
+        background-size: cover;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+    .frame .image-f1{
+        width: 50%;
+    }
+  
+      .frame h1, .frame h2, .frame h5, .frame p {
+        margin-bottom: 15px;
+      }
+  
+      .frame p {
+        max-width: 600px;
+        /*text-align: justify; KASE RATA KIRI KANAN DP TEXT*/
+      }
+  
+      .frame-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        z-index: 20;
+      }
 
     .navigation {
         position: absolute;
@@ -116,9 +136,10 @@
         max-width: 500px;
         display: flex;
         justify-content: space-evenly;
-        padding: 5px;
-        background-color: #005493;
+        padding: 10px;
+        background-color: rgba(2,2,73,0.9);
         border-radius: 10px 10px 0 0;
+        z-index: 42;
     }
     
     .icon {
@@ -128,13 +149,13 @@
     }
     
     .navigation button {
-        background-color: #005493;
+        background-color: rgba(2,2,73,0);
         border: none;
         border-radius: 10px;
         font-size: 20px;
         cursor: pointer;
         transition: background-color 0.3s, transform 0.2s ease;
-        padding: 10px;
+        padding: 15px;
     }
     
     .navigation button:hover {
@@ -155,7 +176,7 @@
         position: sticky;
         bottom: 10%;
         margin-left: 87%; /* Bisa dipertimbangkan untuk diganti */
-        z-index: 20;
+        z-index: 999;
     }
     
     #playPauseAudio {
@@ -173,193 +194,89 @@
     }
 
     .kontener-gambar {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         z-index: 1;
     }
     
-        /* Animasi untuk gambar 1 */
+        /* Gambar image-1 dan image-2 yang berada di atas dan bawah frame */
+        .image-1, .image-2 {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 42; /* Gambar berada di bawah konten frame */
+        }
+        
+        /* Gambar image-1 (atas) */
         .image-1 {
-            position: absolute;
+            top: -50%; /* Posisi gambar 1 di atas */
             width: 100%;
-            top: -100%;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: slideDown 1s forwards;
+            animation: slideDown 2s forwards;
         }
-    
-        @keyframes slideDown {
-            to {
-                top: 0;
-            }
-        }
-    
-        /* Animasi untuk gambar 2 */
+        
+        /* Gambar image-2 (bawah) */
         .image-2 {
-            position: absolute;
-            width: 30%;
-            top: 3px;
-            animation: moveLeftRight 3s ease-in-out infinite;
-        }
-    
-        @keyframes moveLeftRight {
-            0% {
-                left: 10px;
-            }
-            50% {
-                left: 20px;
-            }
-            100% {
-                left: 10px;
-            }
-        }
-    
-        /* Animasi untuk gambar 3 */
-        .image-3 {
-            position: absolute;
-            width: 35%;
-            top: 3px;
-            animation: moveRightLeft 3s ease-in-out infinite;
-        }
-    
-        @keyframes moveRightLeft {
-            0% {
-                right: 0px;
-            }
-            50% {
-                right: 10px;
-            }
-            100% {
-                right: 0px;
-            }
-        }
-    
-        /* Animasi untuk gambar 4 */
-        .image-4 {
-            position: absolute;
-            width: 70%;
-            top: 28%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation: zoomIn 2s forwards;
-        }
-    
-        @keyframes zoomIn {
-            from {
-                transform: translate(-50%, -50%) scale(0);
-            }
-            to {
-                transform: translate(-50%, -50%) scale(1);
-            }
-        }
-    
-        /* Animasi untuk gambar 5 */
-        .image-5 {
-            position: absolute;
-            width: 20%;
-            left: -15%;
-            top: 45%;
-            transform: translateY(-50%);
-            animation: slideInLeft 3s forwards;
-        }
-    
-        @keyframes slideInLeft {
-            to {
-                left: 0%;
-            }
-        }
-    
-        /* Animasi untuk gambar 6 */
-        .image-6 {
-            position: absolute;
-            width: 15%;
-            right: -15%;
-            top: 45%;
-            transform: translateY(-50%);
-            animation: slideInRight 3s forwards;
-        }
-    
-        @keyframes slideInRight {
-            to {
-                right: 0%;
-            }
-        }
-    
-        /* Animasi untuk gambar 7 */
-        .image-7 {
-            position: absolute;
-            width: 40%;
-            left: -50%;
-            bottom: -10px;
-            animation: slideInLeftBung 3s forwards, swingLeft 6s ease-in-out infinite;
-            transform-origin: bottom;
-        }
-    
-        @keyframes slideInLeftBung {
-            to {
-                left: -10%;
-            }
-        }
-    
-        @keyframes swingLeft {
-            0% {
-                transform: rotate(0deg);
-            }
-            50% {
-                transform: rotate(10deg);
-            }
-            100% {
-                transform: rotate(0deg);
-            }
-        }
-    
-        /* Animasi untuk gambar 8 */
-        .image-8 {
-            position: absolute;
-            width: 40%;
-            right: -50%;
-            bottom: -10px;
-            animation: slideInRightBung 3s forwards, swingRigth 6s ease-in-out infinite;
-            transform-origin: bottom;
-        }
-    
-        @keyframes slideInRightBung {
-            to {
-                right: -2%;
-            }
-        }
-    
-        @keyframes swingRigth {
-            0% {
-                transform: rotate(10deg);
-            }
-            50% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(10deg);
-            }
-        }
-    
-        /* Animasi untuk gambar 9 */
-        .image-9 {
-            position: absolute;
+            bottom: -50%; /* Posisi gambar 2 di bawah */
             width: 100%;
-            bottom: -50%;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: slideUp 3s forwards;
-        }
-    
-        @keyframes slideUp {
-            to {
-                bottom: 0px;
-            }
+            animation: slideUp 2s forwards;
         }
 
+        .image-3 {        
+            position: relative;
+            left: 25%;
+            width: 100%;
+            animation: zoomIn 2s forwards;
+        }
+
+        .image-f1 {
+            position: relative;
+            left: 25%;
+            animation: zoomIn 2s forwards;
+        }
+
+    .transisi-atas-bawah{
+        position: relative;
+        width: 100%;
+        top: -10%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: slideDown 3s forwards;
+        opacity: 0;
+    }
+
+    @keyframes slideDown {
+        to {
+            top: 0;
+            opacity: 1;
+        }
+    }
+
+    
+    .transisi-bawah-atas{
+        position: relative;
+        width: 100%;
+        bottom: -10%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: slideUp 3s forwards;
+        opacity: 0;
+    }
+
+    @keyframes slideUp {
+        to {
+            bottom: 0;
+            opacity: 1;
+        }
+    }
+
+    @keyframes zoomIn {
+        from {
+            transform: translate(-50%) scale(0);
+        }
+        to {
+            transform: translate(-50%) scale(1);
+        }
+    }
+
+
+  
       
         
