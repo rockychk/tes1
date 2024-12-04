@@ -174,11 +174,11 @@
     #audioControl {
         display: none; /* Tersembunyi secara default */
         position: sticky;
-        bottom: 10%;
+        bottom: 15vh;
         margin-left: 87%; /* Bisa dipertimbangkan untuk diganti */
         z-index: 999;
     }
-    
+        
     #playPauseAudio {
         background: transparent;
         border: none;
