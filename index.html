@@ -7,40 +7,40 @@
   <!-- Menambahkan Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <link rel="stylesheet" href="style.css">
  
 </head>
 <body>
   
   <div class="container">
-
-    <img src="img/frame-tm.webp" alt="Gambar Atas" class="image-1">
-    <img src="img/frame-bm.webp" alt="Gambar Bawah" class="image-2">
-
     <!-- Frame Cover -->
     <div class="frame-cover">
       <div class="isi-konten">
         <div class="transisi-atas-bawah">
-          <h1>Tasyakuran<br/>Khitan</h1>
+          <h1 style="font-size: 1.5rem;">Tasyakuran<br/>Khitan</h1>
           <div class="nama-anak">Rafasya</div> 
         </div>
         <img src="img/astronout.webp" alt="Gambar Tengah" class="image-3">
         <div class="transisi-bawah-atas">
-          <h3>Kepada Yth:</h3>
+          <h3 style="font-size: 1rem;">Kepada Yth:</h3>
           <h2 id="tamu-undangan"></h2>
         </div>
         <button id="openInvitation">Buka Undangan</button>
       </div>
       
-
+      <img src="img/frame-tm.webp" alt="Gambar Atas" class="image-1">
+      <img src="img/frame-bm.webp" alt="Gambar Bawah" class="image-2">
     </div>
 
-    <!-- Frame 1: Selamat Datang -->
+    <!-- Frame 1: Profil Anak -->
     <div id="frame-1" class="frame">
       <div class="frame-content">
         <img src="img/img-f1.png" alt="Gambar Tengah" class="image-f1">
-        <h3><i>Tasyakuran Aqiqah</i></h3><br>
-        <div class="nama-anak" style="font-size: 35px; letter-spacing: -2px; color: #ec9a5b;">Rafasya Alhanan</div> 
+        <h3 style="font-size: 1rem;"><i>Tasyakuran Aqiqah</i></h3><br>
+        <div class="nama-anak" style="font-size: 2rem; letter-spacing: -2px; color: #ec9a5b;">Rafasya Alhanan</div> 
         <br>
         <p>Anak Kedua dari:</p>
         <h3>Fulan bin Fulan </h3>
@@ -52,72 +52,131 @@
     </div>
       
 
-    <!-- Frame 2: Profil -->
+    <!-- Frame 2: Acara -->
     <div id="frame-2" class="frame">
       <div class="frame-content">
-        <h2 style="color: #c79570;">Tasyakuran Aqiqah</h2>
+        <h2 style="color: #c79570; font-family: 'Helium';">Tasyakuran Aqiqah</h2>
         <p>Sabtu, 25 Januari 2025</p>
         <p>Pukul 09.00 WITA</p>
         <p>Rumah kami Ds. Kramat Kec. Tapa</p>
         <p>Komp. Lapangan IPPOT Tapa</p>
+                <!-- COUNTDOWN -->
+                <div id="countdown" class="countdown">
+                  <div class="time-box">
+                      <div id="days" class="time-value">0</div>
+                      <div class="time-label">Hari</div>
+                  </div>
+                  <div class="time-box">
+                      <div id="hours" class="time-value">0</div>
+                      <div class="time-label">Jam</div>
+                  </div>
+                  <div class="time-box">
+                      <div id="minutes" class="time-value">0</div>
+                      <div class="time-label">Menit</div>
+                  </div>
+                  <div class="time-box">
+                      <div id="seconds" class="time-value">0</div>
+                      <div class="time-label">Detik</div>
+                  </div>
+              </div>
         <img src="img/frame-tm.webp" alt="Gambar Atas" class="image-1">
         <img src="img/frame-bm.webp" alt="Gambar Bawah" class="image-2">
       </div>
     </div>
-    
-      
 
-
-    <!-- Frame 3: Acara -->
+    <!-- Frame 3: Lokasi -->
     <div id="frame-3" class="frame">
       <div class=" frame-content">
-      <h1>Acara</h1>
-      <p>Aqiqah akan diselenggarakan pada:</p>
-      <p><strong>Ahad, 10 Desember 2024</strong></p>
-      <p>Pukul 10:00 WIB</p>
-      <p>Di Kediaman Keluarga Azizah, Jl. Mawar No. 10, Jakarta.</p>
-      <img src="img/frame-tm.webp" alt="Gambar Atas" class="image-1">
-      <img src="img/frame-bm.webp" alt="Gambar Bawah" class="image-2">
+        <h2 style="color: #c79570; font-family: 'Helium';">Lokasi Acara</h2>
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3989.5913421398523!2d123.08086257496493!3d0.6111603993828765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMMKwMzYnNDAuMiJOIDEyM8KwMDUnMDAuNCJF!5e0!3m2!1sid!2sid!4v1733375247455!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p>Komp. Lapangan IPPOT Tapa</p>
+            <a href="https://maps.app.goo.gl/dJqvuonnZbd2VENi7" target="_blank">
+              <button class="button">Petunjuk Lokasi</button>
+            </a>
+        <img src="img/frame-tm.webp" alt="Gambar Atas" class="image-1">
+        <img src="img/frame-bm.webp" alt="Gambar Bawah" class="image-2">
+      </div>
     </div>
-    
-    </div>
- 
-    <!-- Frame 4: Ucapan -->
+
+    <!-- Frame 4: Hadiah -->
     <div id="frame-4" class="frame">
       <div class=" frame-content">
+        <h2 style="color: #c79570; font-family: 'Helium';">Kirim Hadiah</h2>
+        <p>Kami ucapkan terima kasih atas hadiah yang telah diberikan</p>
+        <div class="gift-card">
+          <div class="gift-card-logo">
+            <img src="https://buatlogoonline.com/wp-content/uploads/2022/10/Logo-Bank-BCA-1.png" alt="Bank Mandiri" style="width:70px;">
+          </div>
+          <h3 style="padding-bottom: 10px;">Rocky CHK</h3>
+          <h2>1234-5678-9012</h2>
+          <button class="button" onclick="copyToClipboard('0530528782')">Salin Nomor</button>
+        </div>
 
-      <h1>Ucapan</h1>
-      <p>Berikan ucapan dan doa terbaik untuk Rafasya melalui kolom di bawah ini:</p>
-      <textarea placeholder="Tulis ucapan Anda di sini..." style="width: 80%; height: 80px; margin-top: 10px;"></textarea>
-      <button style="margin-top: 10px; padding: 5px 15px; background: #c79570; color: white; border: none; border-radius: 5px;">Kirim</button>
-    
-      <img src="img/frame-tm.webp" alt="Gambar Atas" class="image-1">
-      <img src="img/frame-bm.webp" alt="Gambar Bawah" class="image-2">
+        <img src="img/frame-tm.webp" alt="Gambar Atas" class="image-1">
+        <img src="img/frame-bm.webp" alt="Gambar Bawah" class="image-2">
       </div>
     </div>
-
-    <!-- Frame 5: Hadiah -->
+ 
+    <!-- Frame 5: Ucapan -->
     <div id="frame-5" class="frame">
       <div class=" frame-content">
+        <h2 style="color: #c79570; font-family: 'Helium';">Ucapan</h2>
+        <p>Berikan ucapan dan doa terbaik untuk Anak kami :</p>
 
-      <h1>Hadiah</h1>
-      <p>Jika Anda ingin memberikan hadiah, berikut adalah detail rekening kami:</p>
-      <p><strong>Bank XYZ</strong></p>
-      <p>No. Rekening: 123456789</p>
-      <p>Atas Nama: Azizah</p>
-      
-      <img src="img/frame-tm.webp" alt="Gambar Atas" class="image-1">
-      <img src="img/frame-bm.webp" alt="Gambar Bawah" class="image-2">
+        <div class="ucapan-container" id="ucapan"></div>
+        <button class="button" id="btnBuatUcapan">Buat Ucapan</button>
+    
+          <div class="form-popup" id="formPopup">
+            <center>
+                <!-- Spinner Loading -->
+                <div id="spinner" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 999; justify-content: center; align-items: center;">
+                    <img src="https://assets.dochipo.com/editor/animations/lion/368a05de-02f4-4ad9-8f0d-14cf6fe1d32b.gif" alt="Loading..." class="spinner-gif">
+                </div>
+            </center>
+            <form id="formPernikahan">
+              <button type="button" class="btn-close" id="btnClosePopup">&times;</button>
+              <h2 class="form-title">Buat Ucapan</h2>
+          
+              <div class="mb-3">
+                <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama" required>
+              </div>
+          
+              <div class="mb-3">
+                <select class="form-select" id="kehadiran" required>
+                  <option value="Hadir">Hadir</option>
+                  <option value="Tidak Hadir">Tidak Hadir</option>
+                </select>
+              </div>
+          
+              <div class="mb-3">
+                <textarea class="form-control" id="pesan" placeholder="Tulis pesan atau ucapan" rows="4" required></textarea>
+              </div>
+          
+              <button type="submit" class="submit-btn">Kirim Ucapan</button>
+            </form>
+          </div>
+
+        <!-- Respon Message -->
+        <div id="respon"></div>
+
+        <img src="img/frame-tm.webp" alt="Gambar Atas" class="image-1">
+        <img src="img/frame-bm.webp" alt="Gambar Bawah" class="image-2">
       </div>
     </div>
+
 
     <!-- Frame 6: Galeri Foto (Kolase) -->
     <div class="frame" id="frame6">
       <div class=" frame-content">
-      <h1>Galeri Foto</h1>
-      <p>Berikut adalah beberapa foto dari acara Aqiqah Rafasya yang ingin kami bagikan dalam bentuk kolase foto.</p>
-      <img src="img/frame-tm.webp" alt="Gambar Atas" class="image-1">
-      <img src="img/frame-bm.webp" alt="Gambar Bawah" class="image-2">
+        <h2 style="color: #c79570; font-family: 'Helium'; margin-top: -100px;">Galeri</h2>
+
+      
+
+      <div class="card card1"><img src="img/34933-gallery-1683875705.jpg"></div>
+      <div class="card card2"><img src="img/34933-gallery-1683875792.jpg"></div>
+
+        <img src="img/frame-tm.webp" alt="Gambar Atas" class="image-1">
+        <img src="img/frame-bm.webp" alt="Gambar Bawah" class="image-2">
       </div>
     </div>
 
@@ -129,7 +188,7 @@
     </div>
     <audio id="backgroundAudio" src="rahmatun-lilalameen-cover-by-mohlaroyim.mp3" loop></audio>
     
-  </div>
+</div>
 
   <!-- Navigation -->
 
@@ -143,15 +202,16 @@
     <button aria-label="Location">
         <img src="icon/geo-alt-fill.svg" alt="Location Icon" class="icon">
     </button>
-    <button aria-label="Chat">
-        <img src="icon/chat-dots-fill.svg" alt="Chat Icon" class="icon">
-    </button>
     <button aria-label="Gift">
         <img src="icon/gift-fill.svg" alt="Gift Icon" class="icon">
     </button>
-    <button aria-label="Chat Square">
-        <img src="icon/chat-square-quote-fill.svg" alt="Chat Square Icon" class="icon">
+    <button aria-label="Chat">
+        <img src="icon/chat-dots-fill.svg" alt="Chat Icon" class="icon">
     </button>
+    <button aria-label="Camera">
+        <img src="icon/camera-fill.svg" alt="Camera Icon" class="icon">
+    </button>
+  </div>
 
   <script>
     
@@ -247,8 +307,177 @@
     const frame2 = document.getElementById('frame-2');
     observer.observe(frame2);
 
+// AWAL COUNTDOWN
+
+// Set the date we're counting down to
+const countDownDate = new Date("Jan 25, 2025 09:00:00").getTime();
+
+// Update the countdown every 1 second
+const countdownFunction = setInterval(function() {
+    // Get the current time
+    const now = new Date().getTime();
+
+    // Find the distance between now and the countdown date
+    const distance = countDownDate - now;
+
+    // Calculate days, hours, minutes and seconds
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the corresponding elements
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    // If the countdown ends, check if it's within 4 hours or more after the event
+    if (distance < 0) {
+        const eventEndTime = countDownDate + (4 * 60 * 60 * 1000);  // Adding 4 hours to countdown end time
+        const currentTime = new Date().getTime();
+        
+        // Check if the event is still ongoing (within 4 hours after the countdown ends)
+        if (currentTime < eventEndTime) {
+            document.getElementById("countdown").innerHTML = "Acara sedang Berlangsung";
+            document.getElementById("countdown").style.backgroundColor = "rgb(48, 121, 179)";  // Orange background
+
+            // Adding other styles when event ends (before 4 hours)
+            document.getElementById("countdown").style.padding = "5px";
+            document.getElementById("countdown").style.borderRadius = "10px";
+            document.getElementById("countdown").style.width = "70%";
+            document.getElementById("countdown").style.color = "white";
+            document.getElementById("countdown").style.fontFamily = "'Sour Gummy', sans-serif";
+            document.getElementById("countdown").style.marginLeft = "60px";
+
+        } else {
+            document.getElementById("countdown").innerHTML = "Acara sudah berakhir";
+            document.getElementById("countdown").style.backgroundColor = "red";  // Red background
+            
+            document.getElementById("countdown").style.padding = "5px";
+            document.getElementById("countdown").style.borderRadius = "10px";
+            document.getElementById("countdown").style.width = "70%";
+            document.getElementById("countdown").style.color = "white";
+            document.getElementById("countdown").style.fontFamily = "'Sour Gummy', sans-serif";
+            document.getElementById("countdown").style.marginLeft = "60px";
+        }
+        clearInterval(countdownFunction);  // Stop the countdown function after it ends
+    }
+}, 1000);
+
+// AKHIR COUNTDOWN
 
 
+//SALIN NOMOR REKENING
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Nomor rekening berhasil disalin!');
+      }).catch(err => {
+        alert('Gagal menyalin nomor rekening.');
+      });
+    }
+
+
+/* AWAL SCRIPT UNTUK FORM DOA DAN UCAPAN */
+
+// Fetch Ucapan
+document.addEventListener('DOMContentLoaded', function() {
+  fetchUcapan(); 
+});
+
+function fetchUcapan() {
+  const url = 'https://script.google.com/macros/s/AKfycbxG8lADguQ9oUeckmkaLcHraGKvhBFf2jnyXry3o-_fvwzwGgjxNY_q9RWR2jZ0b18N/exec';
+  
+  // Menampilkan spinner sebelum mengambil data
+  document.getElementById('spinner').style.display = 'block';
+  
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      displayAllUcapan(data);
+      // Sembunyikan spinner setelah data selesai dimuat
+      document.getElementById('spinner').style.display = 'none';
+    })
+    .catch(() => {
+      // Menyembunyikan spinner jika terjadi kesalahan
+      document.getElementById('spinner').style.display = 'none';
+    });
+}
+
+function displayAllUcapan(ucapanData) {
+  const ucapanContainer = document.getElementById('ucapan');
+  ucapanContainer.innerHTML = '';
+  ucapanData.forEach(ucapan => {
+    const ucapanItem = document.createElement('div');
+    ucapanItem.classList.add('ucapan-item');
+    ucapanItem.innerHTML = `<strong>${ucapan.nama} (${ucapan.kehadiran}):</strong><p>${ucapan.pesan}</p>`;
+    ucapanContainer.appendChild(ucapanItem);
+  });
+}
+
+// Form Popup
+document.getElementById('btnBuatUcapan').addEventListener('click', () => {
+  document.getElementById('formPopup').style.display = 'block';
+});
+
+document.getElementById('btnClosePopup').addEventListener('click', () => {
+  document.getElementById('formPopup').style.display = 'none';
+});
+
+// Submit Form
+document.getElementById('formPernikahan').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Tampilkan Spinner saat form sedang diproses
+  document.getElementById('spinner').style.display = 'block';
+
+  const nama = document.getElementById('nama').value;
+  const kehadiran = document.getElementById('kehadiran').value;
+  const pesan = document.getElementById('pesan').value;
+
+  fetch('https://script.google.com/macros/s/AKfycbxG8lADguQ9oUeckmkaLcHraGKvhBFf2jnyXry3o-_fvwzwGgjxNY_q9RWR2jZ0b18N/exec', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: new URLSearchParams({ 'nama': nama, 'kehadiran': kehadiran, 'pesan': pesan })
+  })
+  .then(response => response.text())
+  .then(() => {
+    document.getElementById('spinner').style.display = 'none';
+    document.getElementById('formPernikahan').reset();
+    displayAlert("Ucapan terkirim!");
+
+    // Menutup form otomatis setelah submit berhasil
+    document.getElementById('formPopup').style.display = 'none';
+    
+    fetchUcapan();
+  })
+  .catch(() => {
+    document.getElementById('respon').innerHTML = 'Terjadi kesalahan, coba lagi nanti.';
+    document.getElementById('spinner').style.display = 'none';
+  });
+});
+
+//ALERT-BOX
+
+function displayAlert(message) {
+  const alertBox = document.createElement('div');
+  alertBox.classList.add('alert-box');
+  alertBox.innerHTML = message;
+  document.body.appendChild(alertBox);
+  setTimeout(() => alertBox.remove(), 3000);
+}
+
+// Copy to clipboard function
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert('Nomor rekening berhasil disalin!');
+    }).catch(err => {
+      alert('Gagal menyalin nomor rekening.');
+    });
+}
+
+/* AKHIR SCRIPT UNTUK FORM DOA DAN UCAPAN */
 
   </script>
 </body>
