@@ -101,13 +101,14 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
     };
 
     // Kirim data ke backend
-    await fetch('https://script.google.com/macros/s/AKfycbxaLvyAccoisaPO_vMEsAcxVjJIlZqV0r7BKWjNCX_yNojCFtKZ0aZGch7VwCiWigkv/exec', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    });
+await fetch('https://script.google.com/macros/s/AKfycbxaLvyAccoisaPO_vMEsAcxVjJIlZqV0r7BKWjNCX_yNojCFtKZ0aZGch7VwCiWigkv/exec', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data),
+    mode: 'no-cors'  // Menambahkan opsi mode 'no-cors'
+});
 
     alert('Pendaftaran berhasil!');
 });
